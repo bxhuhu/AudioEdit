@@ -32,11 +32,11 @@ android {
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation depends.androidx_core_ktx
+    implementation depends.androidx_appcompat
+    implementation depends.android_material_material
+    implementation depends.androidx_constraintlayout
+    testImplementation depends.junit
+    androidTestImplementation depends.androidx_test_ext_junit
+    androidTestImplementation depends.androidx_test_espresso_core
 }

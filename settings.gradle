@@ -8,3 +8,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AudioEdit"
 include ':app'
+include ':AudioEditService'
+include ':AudioEditHMI'
+include ':BaseModule'
+include ':BaseUiModule'

@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 def config = rootProject.ext.config
@@ -8,17 +8,15 @@ def depends = rootProject.ext.depends
 android {
     compileSdk config.compileSdk
 
-
     defaultConfig {
-        applicationId "com.cree.audio_edit_hmi"
         minSdk config.minSdk
         targetSdk config.targetSdk
         versionCode config.versionCode
         versionName config.versionName
 
         testInstrumentationRunner depends.androidx_test_runner_android_unit_unner
+        consumerProguardFiles "consumer-rules.pro"
     }
-
 
     buildTypes {
         release {
@@ -36,5 +34,9 @@ android {
 }
 
 dependencies {
-    implementation project(path: ":BaseModule")
+
+    api project(path: ':BaseModule')
+    api depends.android_material_material
+    api depends.androidx_constraintlayout
+
 }
